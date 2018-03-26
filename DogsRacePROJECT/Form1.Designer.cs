@@ -36,19 +36,22 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.racetrackPictureBox = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.patrykLabel = new System.Windows.Forms.Label();
+            this.jacekLabel = new System.Windows.Forms.Label();
+            this.arekLabel = new System.Windows.Forms.Label();
             this.betButton = new System.Windows.Forms.Button();
             this.startButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            this.patrykTextBox = new System.Windows.Forms.TextBox();
-            this.jacekTextBox = new System.Windows.Forms.TextBox();
-            this.arekTextBox = new System.Windows.Forms.TextBox();
             this.patrykRadioButton = new System.Windows.Forms.RadioButton();
             this.jacekRadioButton = new System.Windows.Forms.RadioButton();
             this.arekRadioButton = new System.Windows.Forms.RadioButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -71,6 +74,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(12, 70);
             this.pictureBox2.Name = "pictureBox2";
@@ -111,15 +115,17 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.patrykLabel);
+            this.groupBox1.Controls.Add(this.jacekLabel);
+            this.groupBox1.Controls.Add(this.arekLabel);
             this.groupBox1.Controls.Add(this.betButton);
             this.groupBox1.Controls.Add(this.startButton);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.numericUpDown2);
             this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.patrykTextBox);
-            this.groupBox1.Controls.Add(this.jacekTextBox);
-            this.groupBox1.Controls.Add(this.arekTextBox);
             this.groupBox1.Controls.Add(this.patrykRadioButton);
             this.groupBox1.Controls.Add(this.jacekRadioButton);
             this.groupBox1.Controls.Add(this.arekRadioButton);
@@ -130,11 +136,63 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dom bukmacherski";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.Location = new System.Drawing.Point(550, 52);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(189, 16);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Maksymalny zakład: 15 zł";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(550, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(164, 16);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Minimalny zakład: 5 zł";
+            // 
+            // patrykLabel
+            // 
+            this.patrykLabel.AutoSize = true;
+            this.patrykLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.patrykLabel.Location = new System.Drawing.Point(117, 89);
+            this.patrykLabel.Name = "patrykLabel";
+            this.patrykLabel.Size = new System.Drawing.Size(133, 15);
+            this.patrykLabel.TabIndex = 14;
+            this.patrykLabel.Text = "Patryk nie zawarł zakładu";
+            // 
+            // jacekLabel
+            // 
+            this.jacekLabel.AutoSize = true;
+            this.jacekLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.jacekLabel.Location = new System.Drawing.Point(117, 65);
+            this.jacekLabel.Name = "jacekLabel";
+            this.jacekLabel.Size = new System.Drawing.Size(132, 15);
+            this.jacekLabel.TabIndex = 13;
+            this.jacekLabel.Text = "Jacek nie zawarł zakładu";
+            // 
+            // arekLabel
+            // 
+            this.arekLabel.AutoSize = true;
+            this.arekLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.arekLabel.Location = new System.Drawing.Point(117, 41);
+            this.arekLabel.Name = "arekLabel";
+            this.arekLabel.Size = new System.Drawing.Size(125, 15);
+            this.arekLabel.TabIndex = 12;
+            this.arekLabel.Text = "Arek nie zawarł zakładu";
+            // 
             // betButton
             // 
-            this.betButton.Location = new System.Drawing.Point(62, 132);
+            this.betButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.betButton.ForeColor = System.Drawing.Color.Black;
+            this.betButton.Location = new System.Drawing.Point(65, 132);
             this.betButton.Name = "betButton";
-            this.betButton.Size = new System.Drawing.Size(75, 23);
+            this.betButton.Size = new System.Drawing.Size(78, 30);
             this.betButton.TabIndex = 11;
             this.betButton.Text = "stawia";
             this.betButton.UseVisualStyleBackColor = true;
@@ -142,9 +200,10 @@
             // 
             // startButton
             // 
-            this.startButton.Location = new System.Drawing.Point(659, 87);
+            this.startButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.startButton.Location = new System.Drawing.Point(567, 113);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(75, 23);
+            this.startButton.Size = new System.Drawing.Size(149, 49);
             this.startButton.TabIndex = 10;
             this.startButton.Text = "Start!";
             this.startButton.UseVisualStyleBackColor = true;
@@ -153,7 +212,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(211, 137);
+            this.label2.Location = new System.Drawing.Point(206, 141);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 13);
             this.label2.TabIndex = 9;
@@ -161,7 +220,7 @@
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(325, 135);
+            this.numericUpDown2.Location = new System.Drawing.Point(324, 137);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             4,
             0,
@@ -183,7 +242,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(146, 133);
+            this.numericUpDown1.Location = new System.Drawing.Point(153, 137);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             15,
             0,
@@ -206,32 +265,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 137);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(4, 139);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 6;
             this.label1.Text = "label1";
-            // 
-            // patrykTextBox
-            // 
-            this.patrykTextBox.Location = new System.Drawing.Point(146, 90);
-            this.patrykTextBox.Name = "patrykTextBox";
-            this.patrykTextBox.Size = new System.Drawing.Size(227, 20);
-            this.patrykTextBox.TabIndex = 5;
-            // 
-            // jacekTextBox
-            // 
-            this.jacekTextBox.Location = new System.Drawing.Point(146, 63);
-            this.jacekTextBox.Name = "jacekTextBox";
-            this.jacekTextBox.Size = new System.Drawing.Size(227, 20);
-            this.jacekTextBox.TabIndex = 4;
-            // 
-            // arekTextBox
-            // 
-            this.arekTextBox.Location = new System.Drawing.Point(146, 36);
-            this.arekTextBox.Name = "arekTextBox";
-            this.arekTextBox.Size = new System.Drawing.Size(227, 20);
-            this.arekTextBox.TabIndex = 3;
             // 
             // patrykRadioButton
             // 
@@ -256,10 +295,12 @@
             // arekRadioButton
             // 
             this.arekRadioButton.AutoSize = true;
+            this.arekRadioButton.Checked = true;
             this.arekRadioButton.Location = new System.Drawing.Point(0, 41);
             this.arekRadioButton.Name = "arekRadioButton";
             this.arekRadioButton.Size = new System.Drawing.Size(47, 17);
             this.arekRadioButton.TabIndex = 0;
+            this.arekRadioButton.TabStop = true;
             this.arekRadioButton.Text = "Arek";
             this.arekRadioButton.UseVisualStyleBackColor = true;
             // 
@@ -267,6 +308,12 @@
             // 
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 10;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Form1
             // 
@@ -279,8 +326,13 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.racetrackPictureBox);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Dzień na wyścigach";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -308,13 +360,16 @@
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox patrykTextBox;
-        private System.Windows.Forms.TextBox jacekTextBox;
-        private System.Windows.Forms.TextBox arekTextBox;
         private System.Windows.Forms.RadioButton patrykRadioButton;
         private System.Windows.Forms.RadioButton jacekRadioButton;
         private System.Windows.Forms.RadioButton arekRadioButton;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label patrykLabel;
+        private System.Windows.Forms.Label jacekLabel;
+        private System.Windows.Forms.Label arekLabel;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }
 
